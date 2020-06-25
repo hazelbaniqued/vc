@@ -1,0 +1,163 @@
+body{
+	margin: 0;
+	padding: 0;
+}
+
+.more-about{
+	font-family: serif;
+}
+
+.box{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	min-height: 220vh;
+	background: #f3f3f3;
+	padding: 50px;
+}
+
+.box h1{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	margin-top: -200px;
+	padding: 0;
+	width: 100%;
+	text-align: center;
+	font-size: 14em;
+	text-transform: uppercase;
+	text-shadow: 0 5px 15px rgba(0,0,0,.2)
+}
+
+.box h1:nth-child(2){
+	background: #f3f3f3;
+	color: #fff;
+	overflow: hidden;
+	z-index: 2;
+	transition: 0.5s;
+	-webkit-clip-path: polygon(0 0, 100% 0, 100% 0, 0% 100%);
+	clip-path: polygon(0 0, 100% 0, 100% 0, 0% 100%);
+}
+
+.box h1:nth-child(2):hover{
+	-webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+	clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+}
+
+.box h1:nth-child(1):hover ~ h1{
+	-webkit-clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+	clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+}
+
+.picture-container{
+	position: relative;
+	margin-top: -1280px;
+	padding: 100px;
+}
+
+.text-contact h1{
+	font-size: 20px;
+	text-align: center;
+	text-transform: uppercase;
+}
+
+*{
+	box-sizing: border-box;
+}
+
+.column{
+	float: left;
+	width: 25%;
+	padding: 5px;
+}
+
+img{
+	width: 100%;
+}
+
+.sports-container{
+	left: 425px;
+	width: 500px;
+	margin-top: 580px;
+	position: absolute;
+}
+
+.sports-container h2{
+	font-size: 20px;
+	text-align: center;
+	color: #000;
+	text-transform: uppercase;
+}
+
+.sports-container .sports{
+	position: relative;
+	display: flex;
+	margin: 20px 0;
+	padding: 24px 10px 18px;
+	background: linear-gradient(#616161 0%, #333 10%, #222);
+	border-radius: 8px;
+	overflow: hidden;
+	border: 2px solid #000;
+	transition: 0.5s;
+}
+
+.sports-container:hover .sports{
+	opacity: 0.05;
+}
+
+.sports-container .sports:hover{
+	opacity: 1;
+	transform: scale(1.1);
+}
+
+
+.sports-container .sports:before{
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%
+	height: 50%;
+	background: rgba(255,255,255,.1);
+	z-index: 10;
+}
+
+.sports-container .sports .name{
+	position: relative;
+	width: 110px;
+	text-align: right;
+	color: #fff;
+	margin-top: -2px;
+}
+
+.sports-container .sports .value{
+	position: relative;
+	width: 40px;
+	text-align: left;
+	color: #fff;
+	margin-top: -2px;
+	text-transform: uppercase;
+}
+
+.sports-container .sports .percent{
+	position: relative;
+	width: calc(100% - 150px);
+	height: 20px;
+	margin: 0 10px;
+	border-radius: 10px;
+	background: #151515;
+	box-shadow: inset 0 0 10px #000;
+	overflow: hidden;
+}
+
+.sports-container .sports .percent .progress{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 70%;
+	height: 100%;
+	border-radius: 10px;
+	background: #f992a6;
+	box-shadow: inset 0 0 2px #000;
+}
